@@ -1,0 +1,12 @@
+/* SLIDESHOW */
+#slideshow-wrap {}
+#slideshow-wrap .slide-container {width:40%; float:left;}
+#slideshow-wrap .slide-container img {width:100%;}
+#slideshow-wrap .slides-wrap {float:right;}
+#slideshow-wrap .slides-wrap ul {list-style-type: none; margin: 0; padding: 0; width:210px;}
+#slideshow-wrap li {margin:0 10px 10px 0; float:left; width:60px;}
+#slideshow-wrap li img {width:100%;}
+
+.picture-slides-fade-container.ng-hide-add,
+.picture-slides-fade-container.ng-hide-remove {-webkit-transition:0.5s linear all; transition:0.5s linear all; }
+.picture-slides-fade-container.ng-hide  { height:0; opacity: 0}

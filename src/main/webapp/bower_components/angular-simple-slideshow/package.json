@@ -1,0 +1,59 @@
+{
+  "name": "angular-simple-slideshow",
+  "version": "0.0.3",
+  "title": "Angular Simple Slideshow",
+  "description": "A simple set of directives that creates a customizable slideshow.",
+  "main": "angular-simple-slideshow.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DevLab2425/angular-simple-slideshow.git"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "angular.js",
+    "slideshow",
+    "slide show",
+    "angular slideshow",
+    "angular slide show"
+  ],
+  "author": {
+    "name": "DevLab2425",
+    "email": "devlab2425@gmail.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/DevLab2425/angular-simple-slideshow/issues"
+  },
+  "homepage": "https://github.com/DevLab2425/angular-simple-slideshow",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.3.9",
+    "grunt-cli": "^0.1.13",
+    "grunt": "^0.4.5",
+    "grunt-ngmin": "0.0.3",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "karma": "^0.12.21",
+    "grunt-karma": "^0.8.3",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-bump": "0.0.15",
+    "matchdep": "^0.3.0",
+    "karma-jasmine": "^0.1.5",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-safari-launcher": "^0.1.1",
+    "grunt-contrib-copy": "^0.5.0"
+  }
+}

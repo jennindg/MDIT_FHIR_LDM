@@ -1,0 +1,66 @@
+<div>
+    <div class="row" ng-switch="vm.isAuthenticated()">			
+        <div class="col-md-8 col-md-offset-2">
+			<h2 style="text-align:left;">Lilly - Observation Search</h2>
+		   <p></p>
+		   <br/>
+           <jhi-alert-error></jhi-alert-error>
+
+            <form name="form" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+                <div class="form-group">
+                    <label class="control-label" for="observationId">Id</label>
+                    <div>
+	                    <input type="text" class="form-control" id="observationId" name="observationId" placeholder="10007"
+	                           ng-model="vm.search.id" ng-minlength=1 ng-maxlength=50 maxlength="50">
+	                           
+	                   	<div ng-show="form.observationId.$dirty && form.observationId.$invalid">
+	                        <p class="help-block"
+	                               ng-show="form.observationId.$error.minlength">
+	                            Observation Id is required to have a minimum of 1 character
+	                        </p>
+	                        <p class="help-block"
+	                               ng-show="form.observationId.$error.maxlength">
+	                            Observation Id cannot be longer than 50 characters
+	                        </p>
+	                    </div>
+                    </div>
+				</div>
+              <div class="form-group">
+                	 <label class="control-label col-sm-1" for="startDate">Start Date</label>
+                	 <div class="col-sm-4">
+						<datepicker date-format="yyyy-MM-dd">
+						  <input type="text" ng-model="vm.search.startDate" name="observationStartDate" id="observationStartDate" type="text" placeholder="2007-08-01"/>
+						</datepicker>
+						<div ng-show="form.observationStartDate.$dirty && form.observationStartDate.$invalid">
+	                        <p class="help-block"
+	                               ng-show="form.observationStartDate.$error.required">
+	                            Start Date is required.
+	                        </p>
+	                    </div>
+			         </div>
+			         <label class="control-label col-sm-1" for="endDate">End Date</label>
+                	 <div class="col-sm-4">
+						<datepicker  date-format="yyyy-MM-dd">
+						  <input type="text" ng-model="vm.search.endDate" name="observationEndDate" id="observationEndDate" type="text" placeholder="2017-08-02"/>
+						</datepicker>
+						<div ng-show="form.observationEndDate.$dirty && form.observationEndDate.$invalid">
+	                        <p class="help-block"
+	                               ng-show="form.observationEndDate.$error.required">
+	                            End Date is required.
+	                        </p>
+	                    </div>
+			         </div>
+                </div>				
+				<div class="form-group">
+				    <div class="col-sm-10" style="padding-top:10px">
+                		<button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">Search</button>
+				    </div>
+				</div>
+				
+			</form>
+			</div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,31 @@
+{
+  "name": "angular-simple-slideshow",
+  "version": "0.0.3",
+  "homepage": "https://github.com/DevLab2425/angular-simple-slideshow",
+  "description": "A simple set of directives that creates a customizable slideshow.",
+  "main": [
+    "angular-simple-slideshow.js",
+    "angular-simple-slideshow.css"
+  ],
+  "keywords": [
+    "angular",
+    "angularjs",
+    "angular.js",
+    "slideshow",
+    "slide show",
+    "angular slideshow",
+    "angular slide show"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.21",
+    "angular-animate": "~1.2.21"
+  }
+}
