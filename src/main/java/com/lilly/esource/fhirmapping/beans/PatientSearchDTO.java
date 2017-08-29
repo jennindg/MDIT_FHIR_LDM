@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
 /*
- * Observation Search Information
+ * Patient Search Information
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PatientSearchDTO {

@@ -63,7 +63,10 @@ public class LillyService {
     	this.applicationProperties = applicationProperties;
     }
 
-    
+    /* This method obtains Observation Search results after invoking web service methods on FHIR 
+     * Server. The results from the web service calls are mapped to LDM elements.
+     * 
+     */
     public String getLillyObservationSearchResults(ObservationSearchDTO searchDTO) {
     	
     	try{

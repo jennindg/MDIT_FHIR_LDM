@@ -78,7 +78,11 @@ public class AcademicService {
     public AcademicService(ApplicationProperties applicationProperties) {
     	this.applicationProperties = applicationProperties;
     }
-
+    
+    /* This method obtains Observation Search results after invoking web service methods on FHIR 
+     * Server. The results from the web service calls are mapped to LDM elements.
+     * 
+     */
     public String getAcademicObservationSearchResults(ObservationSearchDTO searchDTO) {
     	    	
     	try{		    	
@@ -462,6 +466,10 @@ public class AcademicService {
 
     }
 
+    /* This method obtains Observation Search results after invoking web service methods on FHIR 
+     * Server. The results from the web service calls are mapped to LDM elements.
+     * 
+     */
     public String getAcademicPatientSearchResults(PatientSearchDTO searchDTO) {
     	
     	try{		    	

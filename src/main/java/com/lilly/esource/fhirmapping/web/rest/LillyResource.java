@@ -35,23 +35,13 @@ public class LillyResource {
     	this.lillyService = lillyService;
     }
 
+    /*
+     * Lilly Mapping has a set of assumptions that are defined in the slideshow
+     * available at the home page. This method defines an FHIR Observation search 
+     */
     @PostMapping("/lillyMapping/observation/search")
     @Timed
     public ResponseEntity<String> searchObservations(@RequestBody ObservationSearchDTO searchDTO) throws URISyntaxException {
-        log.debug("REST request to search : {}", searchDTO);
-
-    	String searchResults = this.lillyService.getLillyObservationSearchResults(searchDTO);
-    	
-    	//Remove newlines since Angular freaks out otherwise
-    	String escapedXml = StringUtils.escapeXml(searchResults.replaceAll("\\r\\n|\\r|\\n", " "));
-    	String jsonResponse = "{\"ldmXml\" : " +  "\"" + escapedXml + "\"}";
-    	return new ResponseEntity<>(jsonResponse,  HttpStatus.OK);
-    	
-    }
-    
-    @PostMapping("/lillyMapping/patient/search")
-    @Timed
-    public ResponseEntity<String> searchPatients(@RequestBody ObservationSearchDTO searchDTO) throws URISyntaxException {
         log.debug("REST request to search : {}", searchDTO);
 
     	String searchResults = this.lillyService.getLillyObservationSearchResults(searchDTO);

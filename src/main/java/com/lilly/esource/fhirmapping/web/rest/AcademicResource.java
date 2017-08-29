@@ -36,6 +36,10 @@ public class AcademicResource {
     	this.academicService = academicService;
     }
 
+    /*
+     * Academic Mapping has a set of assumptions that are defined in the slideshow
+     * available at the home page. This method defines an observation search 
+     */
     @PostMapping("/academicMapping/observation/search")
     @Timed
     public ResponseEntity<String> searchObservations(@RequestBody ObservationSearchDTO searchDTO) throws URISyntaxException {
@@ -46,7 +50,10 @@ public class AcademicResource {
     	return new ResponseEntity<>(escapeXmlToJson(searchResults),  HttpStatus.OK);
 
     }
-    
+    /*
+     * Academic Mapping has a set of assumptions that are defined in the slideshow
+     * available at the home page. This method defines a patient search 
+     */
     @PostMapping("/academicMapping/patient/search")
     @Timed
     public ResponseEntity<String> searchPatients(@RequestBody PatientSearchDTO searchDTO) throws URISyntaxException {
