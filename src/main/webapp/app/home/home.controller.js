@@ -29,7 +29,9 @@
 						'/content/images/Slide9.GIF',
 						'/content/images/Slide10.GIF',
 						'/content/images/Slide11.GIF',
-						'/content/images/Slide12.GIF',						];
+						'/content/images/Slide12.GIF',	
+						'/content/images/Slide13.GIF',	
+						'/content/images/Slide14.GIF',	];
 
         getAccount();
 
