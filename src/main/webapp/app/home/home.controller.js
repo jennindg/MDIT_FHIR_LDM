@@ -31,7 +31,12 @@
 						'/content/images/Slide11.GIF',
 						'/content/images/Slide12.GIF',	
 						'/content/images/Slide13.GIF',	
-						'/content/images/Slide14.GIF',	];
+						'/content/images/Slide14.GIF',
+						'/content/images/Slide15.GIF',
+						'/content/images/Slide16.GIF',
+						'/content/images/Slide17.GIF',	
+						'/content/images/Slide18.GIF',	
+						'/content/images/Slide19.GIF',	];						
 
         getAccount();
 
