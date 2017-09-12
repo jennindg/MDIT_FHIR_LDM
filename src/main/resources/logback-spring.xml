@@ -22,7 +22,7 @@
     </appender>
 -->
 
-    <logger name="com.lilly.esource.fhirmapping" level="#logback.loglevel#"/>
+    <logger name="com.mapping.esource.fhirmapping" level="#logback.loglevel#"/>
 
     <logger name="io.github.jhipster" level="DEBUG"/>
 
