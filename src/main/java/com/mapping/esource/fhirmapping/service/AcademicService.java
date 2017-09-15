@@ -66,7 +66,7 @@ import com.mapping.esource.fhirmapping.web.rest.util.FhirUtil;
 import com.sun.istack.Nullable;
 
 /**
- * Service class for managing FHIR Academic Mapping Services.
+ * Service class for managing FHIR Academic Mapping (Target State Mapping) Services.
  */
 @Service
 public class AcademicService {
@@ -313,7 +313,7 @@ public class AcademicService {
 		                	 
 		                	 baseTest.setPerformingLab(performingLab);
 		
-		                 	 Optional<Coding> labTestCoding = observation.getCode().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.labTest.org")).findFirst();
+		                 	 Optional<Coding> labTestCoding = observation.getCode().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.labTest.org")).findFirst();
 		
 		                 	 if(labTestCoding.isPresent()){
 			                	 LabTest labTest = new LabTest();
@@ -323,7 +323,7 @@ public class AcademicService {
 			                	 baseTest.setLabTest(labTest);
 		                 	 }
 		                 	 
-		                 	 Optional<Coding> receiverTestCoding = observation.getCode().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.receiverTest.org")).findFirst();
+		                 	 Optional<Coding> receiverTestCoding = observation.getCode().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.receiverTest.org")).findFirst();
 		
 		                	 if(receiverTestCoding.isPresent()){
 		                		 ReceiverTest receiverTest = new ReceiverTest();
@@ -355,31 +355,31 @@ public class AcademicService {
 		                	 }
 		                	 
 		                	 if(observation.getCategory().size() > 0){
-		                		 Optional<Coding> alertFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.alert.org")).findFirst();
+		                		 Optional<Coding> alertFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.alert.org")).findFirst();
 		                		 
 		                		 if(alertFlag.isPresent()){
 		                			 baseResult.setAlertFlag(alertFlag.get().getCode());            			 
 		                		 }
 		
-		                		 Optional<Coding> deltaFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.delta.org")).findFirst();
+		                		 Optional<Coding> deltaFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.delta.org")).findFirst();
 		                		 
 		                		 if(deltaFlag.isPresent()){
 		                			 baseResult.setDeltaFlag(deltaFlag.get().getCode());            			 
 		                		 }
 		                	 
-		                		 Optional<Coding> exclusionFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.exclusion.org")).findFirst();
+		                		 Optional<Coding> exclusionFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.exclusion.org")).findFirst();
 		                		 
 		                		 if(exclusionFlag.isPresent()){
 		                			 baseResult.setExclusionFlag(exclusionFlag.get().getCode());            			 
 		                		 }
 		                		 
-		                		 Optional<Coding> blindingFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.blinding.org")).findFirst();
+		                		 Optional<Coding> blindingFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.blinding.org")).findFirst();
 		                		 
 		                		 if(blindingFlag.isPresent()){
 		                			 baseResult.setBlindingFlag(blindingFlag.get().getCode());            			 
 		                		 }
 		                		 
-		                		 Optional<Coding> toxicityGradeCode = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.toxicity.org")).findFirst();
+		                		 Optional<Coding> toxicityGradeCode = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.toxicity.org")).findFirst();
 		                		 
 		                		 if(toxicityGradeCode.isPresent()){
 		                			 ToxicityGrade toxicityGrade = new ToxicityGrade();
@@ -392,13 +392,13 @@ public class AcademicService {
 		                		 SingleResult singleResult = new SingleResult();
 		                		 baseResult.getSingleResult().add(singleResult);
 		                		 
-		                		 Optional<Coding> resultClass = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.resultClass.org")).findFirst();
+		                		 Optional<Coding> resultClass = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.resultClass.org")).findFirst();
 		                		 
 		                		 if(resultClass.isPresent()){
 		                			singleResult.setResultClass(resultClass.get().getCode());            			 
 		                		 }
 		                		 
-		                		 Optional<Coding> resultType = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.resultType.org")).findFirst();
+		                		 Optional<Coding> resultType = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.resultType.org")).findFirst();
 		                		 
 		                		 if(resultType.isPresent()){
 		                			singleResult.setResultType(resultType.get().getCode());            			 
@@ -704,7 +704,7 @@ public class AcademicService {
 				                	 
 				                	 baseTest.setPerformingLab(performingLab);
 				
-				                 	 Optional<Coding> labTestCoding = observation.getCode().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.labTest.org")).findFirst();
+				                 	 Optional<Coding> labTestCoding = observation.getCode().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.labTest.org")).findFirst();
 				
 				                 	 if(labTestCoding.isPresent()){
 					                	 LabTest labTest = new LabTest();
@@ -714,7 +714,7 @@ public class AcademicService {
 					                	 baseTest.setLabTest(labTest);
 				                 	 }
 				                 	 
-				                 	 Optional<Coding> receiverTestCoding = observation.getCode().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.receiverTest.org")).findFirst();
+				                 	 Optional<Coding> receiverTestCoding = observation.getCode().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.receiverTest.org")).findFirst();
 				
 				                	 if(receiverTestCoding.isPresent()){
 				                		 ReceiverTest receiverTest = new ReceiverTest();
@@ -746,31 +746,31 @@ public class AcademicService {
 				                	 }
 				                	 
 				                	 if(observation.getCategory().size() > 0){
-				                		 Optional<Coding> alertFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.alert.org")).findFirst();
+				                		 Optional<Coding> alertFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.alert.org")).findFirst();
 				                		 
 				                		 if(alertFlag.isPresent()){
 				                			 baseResult.setAlertFlag(alertFlag.get().getCode());            			 
 				                		 }
 				
-				                		 Optional<Coding> deltaFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.delta.org")).findFirst();
+				                		 Optional<Coding> deltaFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.delta.org")).findFirst();
 				                		 
 				                		 if(deltaFlag.isPresent()){
 				                			 baseResult.setDeltaFlag(deltaFlag.get().getCode());            			 
 				                		 }
 				                	 
-				                		 Optional<Coding> exclusionFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.exclusion.org")).findFirst();
+				                		 Optional<Coding> exclusionFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.exclusion.org")).findFirst();
 				                		 
 				                		 if(exclusionFlag.isPresent()){
 				                			 baseResult.setExclusionFlag(exclusionFlag.get().getCode());            			 
 				                		 }
 				                		 
-				                		 Optional<Coding> blindingFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.blinding.org")).findFirst();
+				                		 Optional<Coding> blindingFlag = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.blinding.org")).findFirst();
 				                		 
 				                		 if(blindingFlag.isPresent()){
 				                			 baseResult.setBlindingFlag(blindingFlag.get().getCode());            			 
 				                		 }
 				                		 
-				                		 Optional<Coding> toxicityGradeCode = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.toxicity.org")).findFirst();
+				                		 Optional<Coding> toxicityGradeCode = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.toxicity.org")).findFirst();
 				                		 
 				                		 if(toxicityGradeCode.isPresent()){
 				                			 ToxicityGrade toxicityGrade = new ToxicityGrade();
@@ -783,13 +783,13 @@ public class AcademicService {
 				                		 SingleResult singleResult = new SingleResult();
 				                		 baseResult.getSingleResult().add(singleResult);
 				                		 
-				                		 Optional<Coding> resultClass = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.resultClass.org")).findFirst();
+				                		 Optional<Coding> resultClass = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.resultClass.org")).findFirst();
 				                		 
 				                		 if(resultClass.isPresent()){
 				                			singleResult.setResultClass(resultClass.get().getCode());            			 
 				                		 }
 				                		 
-				                		 Optional<Coding> resultType = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://lilly.resultType.org")).findFirst();
+				                		 Optional<Coding> resultType = observation.getCategoryFirstRep().getCoding().stream().filter(coding -> coding.getSystem().contains("http://mock.resultType.org")).findFirst();
 				                		 
 				                		 if(resultType.isPresent()){
 				                			singleResult.setResultType(resultType.get().getCode());            			 

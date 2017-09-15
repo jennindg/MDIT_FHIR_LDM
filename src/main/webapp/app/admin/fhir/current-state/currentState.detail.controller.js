@@ -3,11 +3,11 @@
 
     angular
         .module('fhirMappingApp')
-        .controller('LillyDetailController', LillyDetailController);
+        .controller('CurrentStateDetailController', CurrentStateDetailController);
 
-    LillyDetailController.$inject = ['$scope', '$uibModalInstance', '$state'];
+    CurrentStateDetailController.$inject = ['$scope', '$uibModalInstance', '$state'];
 
-    function LillyDetailController ($scope, $uibModalInstance,  $state) {
+    function CurrentStateDetailController ($scope, $uibModalInstance,  $state) {
         var vm = this;
         
         vm.clear = clear;

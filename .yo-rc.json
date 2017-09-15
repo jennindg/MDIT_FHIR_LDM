@@ -2,8 +2,8 @@
   "generator-jhipster": {
     "jhipsterVersion": "4.0.8",
     "baseName": "fhirMapping",
-    "packageName": "com.lilly.esource.fhirmapping",
-    "packageFolder": "com/lilly/esource/fhirmapping",
+    "packageName": "com.mapping.esource.fhirmapping",
+    "packageFolder": "com/mapping/esource/fhirmapping",
     "serverPort": "8080",
     "authenticationType": "session",
     "hibernateCache": "no",

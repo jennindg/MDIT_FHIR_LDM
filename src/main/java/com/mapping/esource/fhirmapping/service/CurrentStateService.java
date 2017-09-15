@@ -50,16 +50,16 @@ import com.mapping.esource.fhirmapping.web.rest.util.FhirUtil;
 import com.sun.istack.Nullable;
 
 /**
- * Service class for managing FHIR Lillicized Mapping Services.
+ * Service class for managing FHIR Current State Mapping Services.
  */
 @Service
-public class LillyService {
+public class CurrentStateService {
 
-    private final Logger log = LoggerFactory.getLogger(LillyService.class);
+    private final Logger log = LoggerFactory.getLogger(CurrentStateService.class);
 
     private ApplicationProperties applicationProperties;
 
-    public LillyService(ApplicationProperties applicationProperties) {
+    public CurrentStateService(ApplicationProperties applicationProperties) {
     	this.applicationProperties = applicationProperties;
     }
 
@@ -67,10 +67,10 @@ public class LillyService {
      * Server. The results from the web service calls are mapped to LDM elements.
      * 
      */
-    public String getLillyObservationSearchResults(ObservationSearchDTO searchDTO) {
+    public String getCurrentStateObservationSearchResults(ObservationSearchDTO searchDTO) {
     	
     	try{
-    		    // Get Lilly Transmission Source
+    		    // Get Transmission Source
 		    	GTP gtp = FhirUtil.initializeGTP(false);
 		    	ObjectFactory factory = new ObjectFactory();
 		    	

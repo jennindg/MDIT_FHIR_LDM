@@ -14,37 +14,37 @@ import org.thymeleaf.util.StringUtils;
 
 import com.codahale.metrics.annotation.Timed;
 import com.mapping.esource.fhirmapping.beans.ObservationSearchDTO;
-import com.mapping.esource.fhirmapping.service.LillyService;
+import com.mapping.esource.fhirmapping.service.CurrentStateService;
 
 
 
 /**
- * REST controller for managing Lilly LDM
+ * REST controller for managing Current State LDM
  *
  * 
  */
 @RestController
 @RequestMapping("/api")
-public class LillyResource {
+public class CurrentStateResource {
 
-    private final Logger log = LoggerFactory.getLogger(LillyResource.class);
+    private final Logger log = LoggerFactory.getLogger(CurrentStateResource.class);
 
-    private LillyService lillyService;
+    private CurrentStateService currentStateService;
 
-    public LillyResource(LillyService lillyService) {
-    	this.lillyService = lillyService;
+    public CurrentStateResource(CurrentStateService currentStateService) {
+    	this.currentStateService = currentStateService;
     }
 
     /*
-     * Lilly Mapping has a set of assumptions that are defined in the slideshow
+     * Current State Mapping has a set of assumptions that are defined in the slideshow
      * available at the home page. This method defines an FHIR Observation search 
      */
-    @PostMapping("/lillyMapping/observation/search")
+    @PostMapping("/currentStateMapping/observation/search")
     @Timed
     public ResponseEntity<String> searchObservations(@RequestBody ObservationSearchDTO searchDTO) throws URISyntaxException {
         log.debug("REST request to search : {}", searchDTO);
 
-    	String searchResults = this.lillyService.getLillyObservationSearchResults(searchDTO);
+    	String searchResults = this.currentStateService.getCurrentStateObservationSearchResults(searchDTO);
     	
     	//Remove newlines since Angular freaks out otherwise
     	String escapedXml = StringUtils.escapeXml(searchResults.replaceAll("\\r\\n|\\r|\\n", " "));

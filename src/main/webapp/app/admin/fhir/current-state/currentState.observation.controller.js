@@ -3,11 +3,11 @@
 
     angular
         .module('fhirMappingApp')
-        .controller('LillyObservationController', LillyObservationController);
+        .controller('CurrentStateObservationController', CurrentStateObservationController);
 
-    LillyObservationController.$inject = ['$scope', 'LillyObservationMapping',  '$state'];
+    CurrentStateObservationController.$inject = ['$scope', 'CurrentStateObservationMapping',  '$state'];
 
-    function LillyObservationController ($scope, LillyObservationMapping,  $state) {
+    function CurrentStateObservationController ($scope, CurrentStateObservationMapping,  $state) {
         var vm = this;
         
         vm.save = save;
@@ -21,7 +21,7 @@
         		return;
         	}
             vm.isSaving = true;
-            LillyObservationMapping.save(vm.search, onSaveSuccess, onSaveError);
+            CurrentStateObservationMapping.save(vm.search, onSaveSuccess, onSaveError);
         }
         
         function onSaveSuccess (result) {
@@ -29,7 +29,7 @@
             vm.success = "OK";
             
             vm.ldmXml = result.ldmXml;
-        	$state.go('lilly-observationSearch', {ldmXml : vm.ldmXml}, { reload: true });
+        	$state.go('currentState-observationSearch', {ldmXml : vm.ldmXml}, { reload: true });
 
         }
 

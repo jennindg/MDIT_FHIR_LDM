@@ -3,12 +3,12 @@
 
     angular
         .module('fhirMappingApp')
-        .factory('LillyObservationMapping', LillyObservationMapping);
+        .factory('CurrentStateObservationMapping', CurrentStateObservationMapping);
 
-    LillyObservationMapping.$inject = ['$resource'];
+    CurrentStateObservationMapping.$inject = ['$resource'];
 
-    function LillyObservationMapping ($resource) {
-        var service = $resource('api/lillyMapping/observation/search', {}, {
+    function CurrentStateObservationMapping ($resource) {
+        var service = $resource('api/currentStateMapping/observation/search', {}, {
             'query': {method: 'GET', isArray: false},
             'get': {
                 method: 'GET',

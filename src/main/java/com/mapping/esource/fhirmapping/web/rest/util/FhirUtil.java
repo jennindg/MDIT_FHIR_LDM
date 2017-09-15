@@ -39,7 +39,7 @@ import com.mapping.esource.fhirmapping.beans.PatientSearchDTO;
 public class FhirUtil {
 
     public static final String MODEL_VERSION = "01-0-00";
-    public static final String LILLY_TRANSMISSION_SOURCE = "00001";
+    public static final String CURRENT_TRANSMISSION_SOURCE = "00001";
     public static final String ACADEMIC_TRANSMISSION_SOURCE = "00994";
     
 	 public static Visit getVisit(Study study, String visitId) {
@@ -143,7 +143,7 @@ public class FhirUtil {
 	    	gtp.setCreationDateTime(new Date());
 	    	
 	    	TransmissionSource transmissionSource = new TransmissionSource();
-	    	transmissionSource.setID(academic ? ACADEMIC_TRANSMISSION_SOURCE : LILLY_TRANSMISSION_SOURCE);
+	    	transmissionSource.setID(academic ? ACADEMIC_TRANSMISSION_SOURCE : CURRENT_TRANSMISSION_SOURCE);
 
 	    	gtp.setTransmissionSource(transmissionSource);
 	    	
