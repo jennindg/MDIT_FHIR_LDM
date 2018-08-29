@@ -1,0 +1,84 @@
+{
+    "resourceType": "Bundle",
+    "id": "0dcb8a57-f129-429f-ba35-12b9af44e95e",
+    "meta": {
+        "lastUpdated": "2018-08-29T15:44:07.033-04:00"
+    },
+    "type": "searchset",
+    "total": 1,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://poc-rwe.am.lilly.com:8080/hapi-fhir-jpaserver-example/baseDstu3/ResearchStudy?_id=A2Z-TC-RWEA"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "http://poc-rwe.am.lilly.com:8080/hapi-fhir-jpaserver-example/baseDstu3/ResearchStudy/A2Z-TC-RWEA",
+            "resource": {
+                "resourceType": "ResearchStudy",
+                "id": "A2Z-TC-RWEA",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2018-08-24T15:17:25.439-04:00"
+                },
+                "title": "Eli Lilly Test Study 2018",
+                "protocol": [
+                    {
+                        "identifier": {
+                            "use": "secondary",
+                            "type": {
+                                "text": "A2Z-TC-RWEA"
+                            },
+                            "system": "http://ct.gov/Z5Z-ZZ-CAGN",
+                            "value": "A2Z-TC-RWEA",
+                            "period": {
+                                "start": "2018-05-04T12:18:25.356Z",
+                                "end": "2018-10-04T12:18:25.356Z"
+                            },
+                            "assigner": {
+                                "display": "Organization Eli Lilly"
+                            }
+                        },
+                        "display": "The A2Z-TC-RWEA study is a 4-6 week study where the participants will track pain experienced while going through cancer treatment."
+                    }
+                ],
+                "status": "in-progress",
+                "contact": [
+                    {
+                        "name": "Eli Lilly and Company"
+                    }
+                ],
+                "jurisdiction": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http:/ct.gov",
+                                "code": "US2",
+                                "display": "United States",
+                                "userSelected": true
+                            }
+                        ],
+                        "text": "United States Study"
+                    }
+                ],
+                "description": "Measures pain level during cancer treatment",
+                "period": {
+                    "start": "2018-05-04T12:18:25.356Z",
+                    "end": "2018-10-04T12:18:25.356Z"
+                },
+                "sponsor": {
+                    "reference": "Organization/TNCL9960",
+                    "display": "Eli Lilly and Company"
+                },
+                "principalInvestigator": {
+                    "reference": "Practitioner/TNCL94301579",
+                    "display": "Phoebe Buffay, MD"
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}

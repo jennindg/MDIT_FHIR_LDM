@@ -1,0 +1,99 @@
+{
+    "resourceType": "Bundle",
+    "id": "020e4071-8d1d-435b-bc44-24584f45917c",
+    "meta": {
+        "lastUpdated": "2018-08-29T15:42:00.964-04:00"
+    },
+    "type": "searchset",
+    "total": 2,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://poc-rwe.am.lilly.com:8080/hapi-fhir-jpaserver-example/baseDstu3/Organization?_id=TNCL9952%2CTNCL9953"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "http://poc-rwe.am.lilly.com:8080/hapi-fhir-jpaserver-example/baseDstu3/Organization/TNCL9952",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "TNCL9952",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2018-08-24T14:37:49.884-04:00"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>Clinical Laboratory @ Acme Hospital. ph: +1 555 234 1234, email: \n        <a href=\"mailto:contact@labs.acme.org\">contact@labs.acme.org</a>\n      </p>\n    \n    </div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://www.acme.org/units",
+                        "value": "ClinLab"
+                    }
+                ],
+                "name": "Clinical Lab",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "+1 555 234 1234",
+                        "use": "work"
+                    },
+                    {
+                        "system": "email",
+                        "value": "contact@labs.acme.org",
+                        "use": "work"
+                    }
+                ],
+                "partOf": {
+                    "reference": "Organization/4952",
+                    "display": "ACME Healthcare, Inc"
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "http://poc-rwe.am.lilly.com:8080/hapi-fhir-jpaserver-example/baseDstu3/Organization/TNCL9953",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "TNCL9953",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2018-08-24T14:41:50.234-04:00"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>Oncology @ Acme Hospital. ph: +1 555 234 3523, email: \n        <a href=\"mailto:oncology@acme.org\">oncology@acme.org</a>\n      </p>\n    \n    </div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://www.acme.org/units",
+                        "value": "Oncology"
+                    }
+                ],
+                "name": "ACME Oncology",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "+1 555 234 3523",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "oncology@acme.org",
+                        "use": "work"
+                    }
+                ],
+                "partOf": {
+                    "reference": "Organization/4952",
+                    "display": "ACME Healthcare, Inc"
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}

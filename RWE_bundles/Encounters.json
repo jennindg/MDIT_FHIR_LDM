@@ -1,0 +1,194 @@
+{
+    "resourceType": "Bundle",
+    "id": "796db98d-3564-4bab-b789-bd86cd43a1ac",
+    "meta": {
+        "lastUpdated": "2018-08-29T15:46:48.004-04:00"
+    },
+    "type": "searchset",
+    "total": 3,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://poc-rwe.am.lilly.com:8080/hapi-fhir-jpaserver-example/baseDstu3/Encounter?_id=TNCL14952%2CTNCL14954%2CTNCL19966"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "http://poc-rwe.am.lilly.com:8080/hapi-fhir-jpaserver-example/baseDstu3/Encounter/TNCL14952",
+            "resource": {
+                "resourceType": "Encounter",
+                "id": "TNCL14952",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2018-08-24T15:32:14.568-04:00"
+                },
+                "status": "finished",
+                "statusHistory": [
+                    {
+                        "status": "planned",
+                        "period": {
+                            "start": "2018-07-01T12:18:25.364Z",
+                            "end": "2018-07-03T08:00:25.364Z"
+                        }
+                    },
+                    {
+                        "status": "in-progress",
+                        "period": {
+                            "start": "2018-07-03T08:00:25.364Z",
+                            "end": "2018-07-03T09:00:25.364Z"
+                        }
+                    }
+                ],
+                "class": {
+                    "system": "http://hl7.org/fhir/v3/ActCode",
+                    "code": "CONC",
+                    "display": "certified oncology care"
+                },
+                "subject": {
+                    "reference": "Patient/TNCL654321"
+                },
+                "participant": [
+                    {
+                        "period": {
+                            "start": "2018-07-03T08:00:25.364Z",
+                            "end": "2018-07-03T09:00:25.364Z"
+                        },
+                        "individual": {
+                            "reference": "Practitioner/TNCL94301579"
+                        }
+                    }
+                ],
+                "period": {
+                    "start": "2018-07-03T08:00:25.364Z",
+                    "end": "2018-07-03T09:00:25.364Z"
+                },
+                "serviceProvider": {
+                    "reference": "Organization/TNCL4952"
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "http://poc-rwe.am.lilly.com:8080/hapi-fhir-jpaserver-example/baseDstu3/Encounter/TNCL14954",
+            "resource": {
+                "resourceType": "Encounter",
+                "id": "TNCL14954",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2018-08-24T15:34:24.043-04:00"
+                },
+                "status": "finished",
+                "statusHistory": [
+                    {
+                        "status": "planned",
+                        "period": {
+                            "start": "2018-07-02T12:18:25.364Z",
+                            "end": "2018-07-02T08:00:25.364Z"
+                        }
+                    },
+                    {
+                        "status": "in-progress",
+                        "period": {
+                            "start": "2018-07-02T08:00:25.364Z",
+                            "end": "2018-07-02T09:00:25.364Z"
+                        }
+                    }
+                ],
+                "class": {
+                    "system": "http://hl7.org/fhir/v3/ActCode",
+                    "code": "CONC",
+                    "display": "certified oncology care"
+                },
+                "subject": {
+                    "reference": "Patient/TNCL654321"
+                },
+                "participant": [
+                    {
+                        "period": {
+                            "start": "2018-07-02T08:00:25.364Z",
+                            "end": "2018-07-02T09:00:25.364Z"
+                        },
+                        "individual": {
+                            "reference": "Practitioner/TNCL94301579"
+                        }
+                    }
+                ],
+                "period": {
+                    "start": "2018-07-02T08:00:25.364Z",
+                    "end": "2018-07-02T09:00:25.364Z"
+                },
+                "serviceProvider": {
+                    "reference": "Organization/TNCL9953"
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "http://poc-rwe.am.lilly.com:8080/hapi-fhir-jpaserver-example/baseDstu3/Encounter/TNCL19966",
+            "resource": {
+                "resourceType": "Encounter",
+                "id": "TNCL19966",
+                "meta": {
+                    "versionId": "2",
+                    "lastUpdated": "2018-08-24T16:00:25.972-04:00"
+                },
+                "extension": [
+                    {
+                        "url": "https://fhirtest.uhn.ca/baseDstu3/StructureDefinition/Encounter-Name",
+                        "valueString": "Screening Visit"
+                    }
+                ],
+                "status": "finished",
+                "statusHistory": [
+                    {
+                        "status": "planned",
+                        "period": {
+                            "start": "2018-07-02T12:18:25.364Z",
+                            "end": "2018-07-02T08:00:25.364Z"
+                        }
+                    },
+                    {
+                        "status": "in-progress",
+                        "period": {
+                            "start": "2018-07-02T08:00:25.364Z",
+                            "end": "2018-07-02T09:00:25.364Z"
+                        }
+                    }
+                ],
+                "class": {
+                    "system": "http://hl7.org/fhir/v3/ActCode",
+                    "code": "CONC",
+                    "display": "certified oncology care"
+                },
+                "subject": {
+                    "reference": "Patient/TNCL654678"
+                },
+                "participant": [
+                    {
+                        "period": {
+                            "start": "2018-07-23T08:00:25.364Z",
+                            "end": "2018-07-23T09:00:25.364Z"
+                        },
+                        "individual": {
+                            "reference": "Practitioner/TNCL12345678902"
+                        }
+                    }
+                ],
+                "period": {
+                    "start": "2018-07-23T08:00:25.364Z",
+                    "end": "2018-07-23T09:00:25.364Z"
+                },
+                "serviceProvider": {
+                    "reference": "Organization/TNCL9953"
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}
