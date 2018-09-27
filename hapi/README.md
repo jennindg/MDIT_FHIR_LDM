@@ -1,1 +1,0 @@
-Hapi FHIR Server Example from https://github.com/jamesagnew/hapi-fhir/tree/master/hapi-fhir-jpaserver-example
