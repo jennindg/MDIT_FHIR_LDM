@@ -1,4 +1,4 @@
-# Halo Extract
+# FHIR LDM Mapping
 
-* Usage: mvn exec:java -Dexec.args="http://pocfhir1.am.lilly.com:8080/baseDstu2/ DEKA00043"
-* Usage: mvn exec:java -Dexec.args="http://pocfhir1.am.lilly.com:8080/baseDstu2/" 
+* Usage arguments: -s https://api-v5-r4.hspconsortium.org/R4ClinicalResearch/open -i GREY10001
+ 
